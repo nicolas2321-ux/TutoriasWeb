@@ -1,0 +1,68 @@
+/* Estilos generales */
+$color: #000000;
+$letra: #fff;
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de Navegación */
+nav {
+    background-color: $color;
+    color: #b95757;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: $letra;
+}
+
+/* Contenedor Principal */
+.contenedor {
+  
+    position: relative;
+}
+
+/* Estilos de las Secciones */
+.seccion1, .seccion2 {
+    padding: 20px;
+}
+
+.seccion1 {
+    background-color: #f0f0f0;
+}
+
+.seccion2 {
+    background-color: #e0e0e0;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+p{
+    width: 50%;
+}
+
+
