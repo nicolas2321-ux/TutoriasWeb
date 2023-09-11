@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+       
+            border: 1px solid rgb(0, 0, 0);
+            width: 100px;
+            height: 100px;
+       
+            left: 500px;
+            
+            }
+            .relative-box {
+            position: relative; /* Relativo a su posición original */
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+           
+            }
+            .absolute-box {
+            position: absolute; /* Relativo al primer ancestro posicionado */
+            top: 0;
+            left: 0;
+            border: 1px solid red;
+            width: 70px;
+            height: 50px;
+            margin: 10px;
+            }
+            .boxchild{
+            position: relative;
+            border: 1px solid rgb(0, 0, 0);
+            width: 50px;
+            left: 100px;
+            height: 50px;
+            margin: 10px;
+            }
+            .sticky-box {
+            position: sticky; /* Comportamiento mixto entre relative y fixed */
+            top: 30px;
+            border: 1px solid red;
+            left: 0px;
+            top: 0;
+            height: 50px;
+            margin: 10px;
+            }
+            /* .helper{
+                margin: 1200px;
+            } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sticky-box">Stycky box</div>
+        <div class="box">Box normal</div>
+        <div class="relative-box">Box relativa con su posicion original</div>
+        <div class="box">
+            <div class="boxchild">Box fixed</div>
+        </div>
+        <div class="helper">
+        
+
+      </div>
+
+</body>
+</html>

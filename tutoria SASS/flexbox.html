@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .flex_row {
+        display: flex;
+        flex-direction: row; /* Por defecto, de izquierda a derecha */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* align-content: center; */
+        }
+        .box{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        .flex_text{
+            display: flex;
+            justify-content: space-between;
+            text-align: right;
+         
+        }
+        .text{
+            flex: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- propiedades principales de flexbox
+    display flex
+    flexdirection 
+    justify content
+    align items 
+    flex wrap -->
+    <div class="flex_row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        
+
+    </div>
+    <div class="flex_text">
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusantium reiciendis nam, non repudiandae vero. Nemo porro est, animi ipsum exercitationem perspiciatis architecto odit. Reiciendis eum quam error aliquam ratione?
+        Iure aspernatur ducimus, esse dignissimos quidem commodi itaque molestiae provident impedit blanditiis culpa ab quo, eligendi velit quia reiciendis suscipit perferendis, quod reprehenderit animi. Deserunt totam blanditiis temporibus eum culpa?
+        Nesciunt quam sint nihil incidunt ullam ea repellat, molestias enim, numquam dicta saepe animi, natus harum cupiditate consequuntur cum dolores qui tenetur suscipit dignissimos sunt hic! Ut eligendi dolore et.
+        Ducimus, asperiores. Nesciunt, repellendus reiciendis! Tempore totam quasi cum nobis eveniet saepe ipsum, voluptate facilis necessitatibus exercitationem quaerat quam. Fugit maiores, delectus excepturi dolores odit totam dolorum alias laudantium doloribus?
+        Perferendis rerum saepe, corrupti laudantium culpa doloribus optio fugit recusandae. Nemo nostrum, dolor ipsa soluta minima ipsum cum molestias qui aliquid ad beatae, tenetur est non quisquam doloremque velit facere.</p>
+    </div>
+</body>
+</html>

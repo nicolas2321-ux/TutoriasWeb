@@ -1,0 +1,102 @@
+$primary-color: #a01717;
+$font-size: 16px;
+$primary-color: #3498db;
+$button-bg-color: #3498db;
+$button-text-color: #fff;
+
+body {
+  background-color: $primary-color;
+  font-size: $font-size;
+}
+
+nav {
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// MIXINS
+@mixin button-styles($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-primary {
+  @include button-styles(#3498db, #fff);
+}
+
+.button-secondary {
+  @include button-styles(#e74c3c, #fff);
+}
+
+
+
+
+
+
+
+
+
+
+///CODIGO HTML
+@mixin button-styles($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  margin: 0;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+
+  h1 {
+    text-align: center;
+    color: $primary-color;
+  }
+
+  form {
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      @include button-styles($button-bg-color, $button-text-color);
+    }
+  }
+
+}
+
+@media screen and (min-width: 360px) {
+  body {
+    background-color: #3498db;
+  }
+}
