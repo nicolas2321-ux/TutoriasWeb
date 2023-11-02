@@ -1,0 +1,31 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-content {
+    margin-bottom: 20px;
+  }
+  
+  .card-answers ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .card-answers li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .card-answers li:hover {
+    background-color: #f0f0f0;
+  }
+  
