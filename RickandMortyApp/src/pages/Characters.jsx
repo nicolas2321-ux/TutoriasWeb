@@ -15,8 +15,10 @@ export function Card(){
   
     const [post, setPost] = useState([]);
    
-    let [pagination, setPagination] = useState(1)
-    console.log(search)
+    const [pagination, setPagination] = useState(1)
+
+
+   
     let isAlive = (alive) => {
       if (alive == "Alive") {
         return true
@@ -25,7 +27,8 @@ export function Card(){
       
   }
     let nextPage = () => {
-      setPagination((pagination+=1))
+      let pagina_actual = pagination
+      setPagination((pagina_actual+=1))
       document.documentElement.scrollTop = 0
     }
 
@@ -44,9 +47,9 @@ export function Card(){
         const onSubmitHandler = async () => {
           try {
             const data = await getAllCharacter(pagination);
-    
+           
             setPost(data);
-            console.log(data);
+          
           } catch (error) {
             console.log(error);
            
@@ -55,7 +58,15 @@ export function Card(){
         onSubmitHandler();
       }, [pagination]);
 
-        
+        /*
+        peticion a la api
+        100 resultados
+        100 => arreglo
+        arreglo.map = 5 => nuevo_arreglo
+        arreglo.map (comienza desde la posicion ) 6 => 10 => nuevo_arreglo
+        arreglo.map (comienza desde la posicion ) 11 => 15 => nuevo_arreglo
+        */
+
       return (
         <>
         <Navbar_dark></Navbar_dark>

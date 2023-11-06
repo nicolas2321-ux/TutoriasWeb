@@ -8,6 +8,7 @@ import { Search } from './pages/Search';
 import { FilterGender } from './pages/FilterGender';
 import { FilterSpecies } from './pages/FilterBySpecies';
 import { FilterStatus } from './pages/FilterByStatus';
+import { LocalStorage } from './pages/localstorage';
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path='/gender' element = {<FilterGender/>}/>
       <Route path='/species' element = {<FilterSpecies/>}/>
       <Route path='/status' element = {<FilterStatus/>}/>
+      <Route path='/local' element = {<LocalStorage/>}/>
     </Routes>
 
     </>

@@ -8,13 +8,14 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 export function FilterStatus() {
-    const [gender, setGender] = useState("Alive")
+    const [gender, setGender] = useState("Dead")
     const [post, setPost] = useState([])
     let [pagination, setPagination] = useState(1)
+
     useEffect(() => {
-        const onSubmitHandler = async () => {
+        const onSubmitHandler = async () => {   
           try {
-            console.log("click");
+           
             const data = await FilterbyStatus( gender, pagination);
     
             setPost(data);
@@ -54,6 +55,10 @@ export function FilterStatus() {
         document.documentElement.scrollTop = 0
         }
       }
+      function changeGender(gen){
+        setGender(gen)
+        setPagination(1)
+      }
 
     return (
         <>
@@ -61,7 +66,7 @@ export function FilterStatus() {
             <div className="trans">
                 <Button
                     variant="danger"
-                    onClick={()=>{changeParameter("Dead")}}
+                    onClick={()=>{changeGender("Dead")}}
                     className="my-5  mx-3 px-4 text-light"
                 >
                    Dead
@@ -69,7 +74,7 @@ export function FilterStatus() {
                 
                 <Button
                     variant="success"
-                    onClick={()=>{changeParameter("Alive")}}
+                    onClick={()=>{changeGender("Alive")}}
                     className="my-5  mx-3 px-4 text-light"
                 >
                     Alive
@@ -77,7 +82,7 @@ export function FilterStatus() {
 
                 <Button
                     variant="info"
-                    onClick={()=>{changeParameter("Unknown")}}
+                    onClick={()=>{changeGender("Unknown")}}
                     className="my-5  mx-3 px-4 text-light"
                 >
                     Unknown

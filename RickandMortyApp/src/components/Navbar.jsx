@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useNavigate } from 'react-router-dom';
 
 
 export function search(name){
@@ -16,14 +17,13 @@ export function search(name){
 
 export function Navbar_dark() {
 
-  let [name, setName] = useState("")
- 
+  const [name, setName] = useState("")
+ const history = useNavigate();
  
   const handleSubmit = (e) => {
     search(name)
     localStorage.setItem('search', name);
-    this.props.history.push("search")
-    
+    history('/search')
     e.preventDefault();
    
     
