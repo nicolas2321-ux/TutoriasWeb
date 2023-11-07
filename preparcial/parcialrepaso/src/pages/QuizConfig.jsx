@@ -29,6 +29,9 @@ const QuizConfig = () => {
   const goBack = () => {
     navigate('/');
   }
+  const handlerShowQuizzSaved = () =>{
+    navigate('/quizzSaved');
+  }
 
 
   return (
@@ -86,6 +89,9 @@ const QuizConfig = () => {
           </button>
           <button style={{marginTop:"15px", backgroundColor:"#94122c"}} type="button" onClick={goBack}>
             Regresar
+          </button>
+          <button style={{marginTop:"15px"}} onClick={handlerShowQuizzSaved}>
+            Regresar al quizz guardado
           </button>
   
         </form>

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../assets/card.module.css'
 import Button from './Button';
-const Card = ({ question, handlerAns }) => {
+const Card = ({ question, handlerAns, numeroPregunta, cantidadPreguntas }) => {
  
   const [answer, setAnswer] = useState('');
   const [showButton, setShowButton] = useState(true);
-  
+
 
 useEffect(() => {
+  console.log(question);
     setAnswer('');
     setShowButton(true);
 }, [question]);
@@ -54,6 +55,7 @@ useEffect(() => {
           <div className={styles.cardContent}>
             <h2>Pregunta:</h2>
             <p>{question.question}</p>
+            <h3># pregunta {numeroPregunta}/{cantidadPreguntas}</h3>
           </div>
           <div className={styles.cardAnswers}>
             <h3>Respuestas:</h3>

@@ -10,9 +10,11 @@ const Quizz = ({ questions }) => {
   const [finish, setFinish] = useState(false);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [incorrectAnswers, setIncorrectAnswers] = useState(0);
+  const [numeroPreguntas  , setNumeroPreguntas] = useState(0);
   
   useEffect(() => {
     setAnswers([]);
+    setNumeroPreguntas(questions.length);
   }, []);
 
   
@@ -54,6 +56,15 @@ const Quizz = ({ questions }) => {
       setCurrentQuestion(currentQuestion + 1);
     }
   }
+  const handlerGuardarTest = () => {
+    const object = {
+      preguntas: questions,
+      respuestas: answers,
+      numero_pregunta: currentQuestion,
+    };
+    const tests = localStorage.setItem('tests', JSON.stringify(object));
+    
+  }
 
   return (
   
@@ -68,7 +79,8 @@ const Quizz = ({ questions }) => {
     </div>
   ) : (
     <div>
-      <Card question={ActualQuestion} handlerAns={handleAnswer} />
+      <Card question={ActualQuestion} handlerAns={handleAnswer} numeroPregunta={currentQuestion+1} 
+      cantidadPreguntas={numeroPreguntas}/>
       {currentQuestion !== questions.length - 1 ? (
         <Button
           text="Siguiente pregunta"
@@ -77,6 +89,10 @@ const Quizz = ({ questions }) => {
       ) : (
         <Button onClick={handleFinish} text="Finalizar" />
       )}
+              <Button
+          text="Guardar Test"
+          onClick={handlerGuardarTest}
+        />
     </div>
   )
 }
